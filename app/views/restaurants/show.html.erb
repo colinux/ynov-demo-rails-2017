@@ -1,0 +1,12 @@
+<div class="restaurants">
+  <h1><%= @restaurant.name %></h1>
+
+  <section class="row restaurant">
+    <div class="col-sm-4">
+      <%= cl_image_tag(@restaurant.photo.path, width: 300, height: 200, crop: :fill, class: "picture") %>
+    </div>
+    <div class="col-sm-8">
+      <p>Addresse: <%= @restaurant.city %></p>
+    </div>
+  </section>
+</div>
