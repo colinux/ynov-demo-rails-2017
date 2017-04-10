@@ -10,6 +10,27 @@
     <div class="col-sm-8">
       <p>Addresse: <%= @restaurant.city %></p>
       <p>Propriétaire: <%= @restaurant.user.email %></p>
+
+      <div class="comments">
+        <%- if @restaurant.comments.any? %>
+          <h2>Commentaires:</h2>
+
+          <%- @restaurant.comments.each do |comment| %>
+            <section class="comment">
+              <blockquote>
+                <%= comment.text %>
+              </blockquote>
+              <p class="small text-right">Par <%= comment.user.email %> le <%= l(comment.created_at.to_date, format: "%d/%m/%Y") %></p>
+            </section>
+          <% end %>
+        <% end %>
+
+        <%- if user_signed_in? %>
+          <%= render partial: "comments/form", locals: { restaurant: @restaurant, comment: @new_comment } %>
+        <% else %>
+          <p>Vous devez être connecté.e pour laisser un commentaire.</p>
+        <% end %>
+      </div>
     </div>
   </section>
 </div>
