@@ -1,6 +1,9 @@
 <div class="restaurants">
   <h1>Tous nos restaurants</h1>
 
+  <p class="text-right">
+    <%= link_to("Votre restaurant n'est pas listé ?", new_restaurant_path, class: "btn btn-success") %>
+  </p>
   <%- @restaurants.each do |restaurant| -%>
     <section class="row restaurant">
       <div class="col-sm-4">

@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= simple_form_for(restaurant) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :city %>
+      <%= f.input :photo, as: :attachinary, accept: "image" %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
