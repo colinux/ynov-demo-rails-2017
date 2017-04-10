@@ -26,6 +26,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'attachinary'
 gem 'cloudinary'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
