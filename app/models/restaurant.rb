@@ -4,4 +4,7 @@ class Restaurant < ApplicationRecord
 
   validates :photo, presence: true
   has_attachment :photo, accept: [:jpg, :png, :jpeg]
+
+  belongs_to :user
+  validates :user, presence: true
 end
