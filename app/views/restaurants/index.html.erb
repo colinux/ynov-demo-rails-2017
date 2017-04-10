@@ -1,0 +1,15 @@
+<div class="restaurants">
+  <h1>Tous nos restaurants</h1>
+
+  <%- @restaurants.each do |restaurant| -%>
+    <section class="row restaurant">
+      <div class="col-sm-4">
+        <%= cl_image_tag(restaurant.photo.path, width: 300, height: 200, crop: :fill, class: "picture") %>
+      </div>
+      <div class="col-sm-8">
+        <h2><%= restaurant.name %></h2>
+        <p><%= restaurant.city %></p>
+      </div>
+    </section>
+  <% end %>
+</div>

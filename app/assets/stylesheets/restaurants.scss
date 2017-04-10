@@ -1,3 +1,24 @@
-// Place all the styles related to the Restaurants controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$green: #33aa79;
+$gray-light: #eef3ee;
+
+.restaurants {
+  h1 {
+    text-align: center;
+    color: $green;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.restaurant {
+  margin-bottom: 20px;
+  background: $gray-light;
+  padding: 20px;
+
+  img {
+    @include box-shadow(4px 4px 5px rgba(0, 0, 0, .3));
+    max-width: 100%;
+  }
+}
