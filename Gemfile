@@ -27,6 +27,8 @@ gem 'simple_form'
 gem 'attachinary'
 gem 'cloudinary'
 gem 'devise'
+gem 'devise-i18n'
+gem 'rails-i18n'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
