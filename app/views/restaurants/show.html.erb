@@ -16,16 +16,14 @@
           <h2>Commentaires:</h2>
 
           <%- @restaurant.comments.each do |comment| %>
-            <section class="comment">
-              <blockquote>
-                <%= comment.text %>
-              </blockquote>
-              <p class="small text-right">Par <%= comment.user.email %> le <%= l(comment.created_at.to_date, format: "%d/%m/%Y") %></p>
-            </section>
+            <%= render partial: "comments/show", locals: { comment: comment } %>
           <% end %>
         <% end %>
+      </div>
 
-        <%- if user_signed_in? %>
+      <div class="comment-instruction">
+        <% if user_signed_in? %>
+          <h4>Ajoutez votre commentaire :</h4>
           <%= render partial: "comments/form", locals: { restaurant: @restaurant, comment: @new_comment } %>
         <% else %>
           <p>Vous devez être connecté.e pour laisser un commentaire.</p>
