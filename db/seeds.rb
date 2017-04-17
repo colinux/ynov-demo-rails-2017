@@ -5,7 +5,7 @@ def open_photo(name)
   File.open(Rails.root.join("db", "restaurant-images", name))
 end
 
-user = User.create!(email: "colin@darie.eu", password: "password")
+user = User.create!(email: "colin@darie.eu", username: "colinux", password: "password")
 
 resto = Restaurant.create!(name: "Aux Petits Oignons", user: user,
   city: "Aix-en-Provence", photo: open_photo("aux-petits-oignons.jpg"))

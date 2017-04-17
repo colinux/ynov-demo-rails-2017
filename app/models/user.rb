@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :restaurants
   has_many :comments
+
+  has_attachment :avatar, accept: [:jpg, :png, :jpeg]
+
+  validates :username, presence: true, uniqueness: true
 end
