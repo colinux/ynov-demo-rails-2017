@@ -1,0 +1,9 @@
+<% if @new_comment.errors.any? %>
+  $("#new_comment").html("<%= j render partial: 'comments/form', locals: { restaurant: @new_comment.restaurant, comment: @new_comment } %>")
+<% else %>
+  var comment = $("<%= j render partial: 'comments/show', locals: { comment: @new_comment } %>").hide();
+  $(".comments").append(comment);
+  comment.slideDown();
+
+  $("#comments_header").html("<%= j render partial: 'restaurants/comments_header', locals: { restaurant: @new_comment.restaurant } %>")
+<% end %>

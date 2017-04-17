@@ -1,4 +1,4 @@
-<%= simple_form_for([restaurant, comment]) do |f| %>
+<%= simple_form_for([restaurant, comment], remote: true) do |f| %>
   <%= f.input :text, label: false %>
   <%= f.button :submit %>
 <% end %>
