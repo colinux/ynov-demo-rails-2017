@@ -21,8 +21,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'sqlite3', '~> 1.3', '>= 1.3.13'
-
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
@@ -51,6 +49,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3', '~> 1.3', '>= 1.3.13'
+
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
