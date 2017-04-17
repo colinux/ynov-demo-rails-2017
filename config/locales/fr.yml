@@ -1,0 +1,30 @@
+fr:
+  activerecord:
+    models:
+      comment:
+        one: Commentaire
+        other: Commentaires
+
+      restaurant:
+        one: Restaurant
+        other: Restaurants
+
+
+    attributes:
+      comment:
+        text: Texte
+
+      restaurant:
+        name: Nom
+        city: Ville
+        photo: Photo
+
+  restaurants:
+    comments_header:
+      zero: "Il n'y a pas de commentaire."
+      one: "Il y a un premier commentaire."
+      other: "Il y a %{count} commentaires."
+
+    form:
+      title: "Ajout d'un restaurant"
+      submit: "Créer le restaurant"

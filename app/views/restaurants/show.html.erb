@@ -12,12 +12,14 @@
       <p>Propriétaire: <%= @restaurant.user.email %></p>
 
       <div class="comments">
-        <%- if @restaurant.comments.any? %>
-          <h2>Commentaires:</h2>
+        <h2 id="comments_header">
+          <%= t(".comments_header", count: @restaurant.comments.count) %>
+        </h2>
 
-          <%- @restaurant.comments.each do |comment| %>
-            <%= render partial: "comments/show", locals: { comment: comment } %>
-          <% end %>
+        <%= render partial: "restaurants/comments_header", locals: { restaurant: @restaurant } %>
+
+        <%- @restaurant.comments.each do |comment| %>
+          <%= render partial: "comments/show", locals: { comment: comment } %>
         <% end %>
       </div>
 
