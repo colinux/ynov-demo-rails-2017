@@ -27,6 +27,7 @@ gem 'simple_form'
 gem 'attachinary'
 gem 'cloudinary'
 gem 'devise'
+gem 'simple_token_authentication'
 gem 'devise-i18n'
 gem 'rails-i18n'
 
