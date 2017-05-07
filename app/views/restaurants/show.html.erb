@@ -5,7 +5,7 @@
 
   <section class="row restaurant">
     <div class="col-sm-4">
-      <%= cl_image_tag(@restaurant.photo.path, width: 300, height: 200, crop: :fill, class: "picture") %>
+      <%= cl_image_tag(restaurant_photo_url(@restaurant), width: 300, height: 200, crop: :fill, class: "picture") %>
     </div>
     <div class="col-sm-8">
       <p>Addresse: <%= @restaurant.city %></p>
