@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api_v1 do
-    resources :restaurants, only: [:index, :show]
+    resources :restaurants, only: [:index, :show, :create]
   end
 
   # la liste des restaurants sera la page d'accueil :

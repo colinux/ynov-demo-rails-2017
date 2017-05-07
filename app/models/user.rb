@@ -10,4 +10,6 @@ class User < ApplicationRecord
   has_attachment :avatar, accept: [:jpg, :png, :jpeg]
 
   validates :username, presence: true, uniqueness: true
+
+  acts_as_token_authenticatable
 end
